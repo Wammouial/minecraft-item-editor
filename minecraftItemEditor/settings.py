@@ -99,18 +99,13 @@ WSGI_APPLICATION = 'minecraftItemEditor.wsgi.application'
 
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': "minecraftItemEditor",
-		'USER': "minecraftItemEditor",
-		'PASSWORD': "abb47490dd0942bc2766a435050deef9720340d127c2fdb633b4d8dcaf708d86",
-		'HOST': 'localhost',
-		'PORT': '3306',
-		'OPTIONS': {
-			'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-			'charset': 'utf8mb4',
-		},
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
+    },
 }
 
 # Password validation
