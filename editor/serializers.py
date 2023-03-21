@@ -1,9 +1,15 @@
+import json
+
 from rest_framework import serializers
 from .models import Item, Panoplie, Template
 
 
 from rest_framework import serializers
 from .models import Item, Panoplie, Template
+
+
+import json
+import jsonpickle
 
 
 class ItemSerializer(serializers.ModelSerializer):
@@ -13,6 +19,7 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = ('id', 'name', 'image', 'options', 'base')
+
 
 
 class PanoplieSerializer(serializers.ModelSerializer):

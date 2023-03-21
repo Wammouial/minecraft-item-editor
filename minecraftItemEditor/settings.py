@@ -24,11 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "fb@o3!25(szrlv6(-2t!i9x(+u5^qfyz&qgx(#@2frxnf5-$m+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
-
-AUTH_USER_MODEL = 'rpapi.User'
 
 DJANGO_SUPERUSER_NAME = "Kado"
 DJANGO_SUPERUSER_MAIL = "test@mail.com"
@@ -102,9 +100,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-        },
     },
 }
 
