@@ -28,3 +28,13 @@ def parseYAML(yamlString):
 
     # Return the base and options dictionaries
     return name, base, options
+
+
+def toYAML(item):
+    data = {
+        item.name: {
+            'option': item.options,
+            'base': item.base,
+        }
+    }
+    return yaml.dump(data)

@@ -1,9 +1,12 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework import generics
+from rest_framework import generics, viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
 from .models import Item, Panoplie, Template
 from .serializers import ItemSerializer, PanoplieSerializer, TemplateSerializer
+from .yamlParser import toYAML
 
 
 class ItemList(generics.ListCreateAPIView):
@@ -36,6 +39,21 @@ class TemplateDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TemplateSerializer
 
 
+class ItemViewSet(viewsets.ModelViewSet):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
+
+
+class PanoplieViewSet(viewsets.ModelViewSet):
+    queryset = Panoplie.objects.all()
+    serializer_class = PanoplieSerializer
+
+
+class TemplateViewSet(viewsets.ModelViewSet):
+    queryset = Template.objects.all()
+    serializer_class = TemplateSerializer
+
+
 @csrf_exempt
 def create_item_from_yaml(request):
     if request.method == 'POST':
@@ -50,3 +68,14 @@ def create_item_from_yaml(request):
 
     # Return a 405 error if the request method is not POST
     return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+
+def item_to_yaml(request, item_id):
+    try:
+        item = Item.objects.get(pk=item_id)
+    except Item.DoesNotExist:
+        return JsonResponse({'error': 'Item not found'}, status=404)
+
+    yaml_str = toYAML(item)
+
+    return HttpResponse(yaml_str, content_type='text/yaml')

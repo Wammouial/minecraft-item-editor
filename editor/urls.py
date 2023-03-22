@@ -1,15 +1,22 @@
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import RedirectView
 
-from .api import ItemList, ItemDetail, PanoplieList, PanoplieDetail, TemplateList, TemplateDetail, create_item_from_yaml
+from rest_framework.routers import DefaultRouter
+
+from .api import ItemList, ItemDetail, PanoplieList, PanoplieDetail, TemplateList, TemplateDetail, \
+    create_item_from_yaml, item_to_yaml, ItemViewSet, PanoplieViewSet, TemplateViewSet
+
+router = DefaultRouter()
+
+router.register(r'items', ItemViewSet)
+router.register(r'panoplies', PanoplieViewSet)
+router.register(r'templates', TemplateViewSet)
+
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='items/', permanent=True)),
-    path('items/', ItemList.as_view(), name='item-list'),
-    path('items/<int:pk>/', ItemDetail.as_view(), name='item-detail'),
-    path('items/create_from_yaml/', create_item_from_yaml, name='create_item_from_yaml'),
-    path('panoplies/', PanoplieList.as_view(), name='panoplie-list'),
-    path('panoplies/<int:pk>/', PanoplieDetail.as_view(), name='panoplie-detail'),
-    path('templates/', TemplateList.as_view(), name='template-list'),
-    path('templates/<int:pk>/', TemplateDetail.as_view(), name='template-detail'),
+    path('create_from_yaml/', create_item_from_yaml, name='create_item_from_yaml'),
+    path('<int:item_id>/to_yaml/', item_to_yaml, name='item_to_yaml'),
+    path('', include(router.urls)),
+
+
 ]
