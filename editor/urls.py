@@ -5,6 +5,7 @@ from rest_framework.routers import DefaultRouter
 
 from .api import ItemList, ItemDetail, PanoplieList, PanoplieDetail, TemplateList, TemplateDetail, \
     create_item_from_yaml, item_to_yaml, ItemViewSet, PanoplieViewSet, TemplateViewSet
+from .views import root
 
 router = DefaultRouter()
 
@@ -14,6 +15,7 @@ router.register(r'templates', TemplateViewSet)
 
 
 urlpatterns = [
+    path('', root, name='root'),
     path('create_from_yaml/', create_item_from_yaml, name='create_item_from_yaml'),
     path('<int:item_id>/to_yaml/', item_to_yaml, name='item_to_yaml'),
     path('', include(router.urls)),

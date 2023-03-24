@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47a8e5d9-6183-4290-845c-8547750758c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/editor/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minecraftItemEditor/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/EditorComponent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/NavigatorComponent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/root.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/ItemController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/templates/editor/components/EditorComponent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/templates/editor/components/NavigatorComponent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/templates/editor/root.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/editor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/yamlParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/yamlParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minecraftItemEditor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/minecraftItemEditor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minecraftItemEditor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/minecraftItemEditor/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -37,19 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;W:/Dev/minecraft-item-editor/venv&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "W:/Dev/minecraft-item-editor/venv",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\Dev\minecraft-item-editor\editor\templates\editor" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +75,7 @@
       <updated>1679428437675</updated>
       <workItem from="1679428440093" duration="8937000" />
       <workItem from="1679441447436" duration="3464000" />
+      <workItem from="1679692799611" duration="6956000" />
     </task>
     <servers />
   </component>

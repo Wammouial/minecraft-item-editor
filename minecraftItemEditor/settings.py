@@ -74,9 +74,10 @@ ROOT_URLCONF = 'minecraftItemEditor.urls'
 TEMPLATES = [
 	{
 		'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		'DIRS': ""  # [os.path.join(BASE_DIR, 'rpapi', 'templates'),
-		# ],
-		,
+		'DIRS':  [
+			os.path.join(BASE_DIR, 'editor', 'templates', 'editor'),
+			os.path.join(BASE_DIR, 'editor', 'templates', 'editor', 'components'),
+		],
 		'APP_DIRS': True,
 		'OPTIONS': {
 			'context_processors': [

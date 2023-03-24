@@ -1,0 +1,25 @@
+<div class="editor">
+  <h2 class="editor-title">Editeur</h2>
+  <form class="editor-form">
+    <div class="form-group">
+      <label for="item-name">Nom</label>
+      <input type="text" id="item-name" name="item-name" required>
+    </div>
+    <div class="form-group">
+      <label for="item-image">Image</label>
+      <input type="text" id="item-image" name="item-image" required>
+    </div>
+    <div class="form-group">
+      <label for="item-type">Type</label>
+      <select id="item-type" name="item-type" required>
+        <option value="block">Bloc</option>
+        <option value="item">Objet</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="item-properties">Propriétés</label>
+      <textarea id="item-properties" name="item-properties"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+</div>

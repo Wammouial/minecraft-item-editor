@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  height: 100%;
+}
+
+#navigator {
+  width: 20%;
+  min-width: 200px;
+}
+
+#explorer {
+  width: 40%;
+}
+
+#editor {
+  width: 40%;
+}
