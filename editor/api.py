@@ -14,11 +14,15 @@ from .yamlParser import toYAML
 class ItemList(generics.ListCreateAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+    authentication_classes = [SessionAuthentication]
+    permission_classes = [AllowAny]
 
 
 class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+    authentication_classes = [SessionAuthentication]
+    permission_classes = [AllowAny]
 
 
 class PanoplieList(generics.ListCreateAPIView):
@@ -44,6 +48,8 @@ class TemplateDetail(generics.RetrieveUpdateDestroyAPIView):
 class ItemViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+    authentication_classes = [SessionAuthentication]
+    permission_classes = [AllowAny]
 
 
 class PanoplieViewSet(viewsets.ModelViewSet):

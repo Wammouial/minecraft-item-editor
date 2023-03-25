@@ -6,7 +6,7 @@ from editor.yamlParser import parseYAML
 
 class Item(models.Model):
     name = models.CharField(max_length=255)
-    image = models.ImageField()
+    image = models.ImageField(default=None, null=True)
     optionsJSON = models.TextField()
     baseJSON = models.TextField()
 

@@ -1,9 +1,12 @@
 import Editor from "../editor.js";
+import EditorController from "./EditorController.js";
 
 class ExplorerController {
     constructor() {
         if (!ExplorerController.instance) {
             this.editor = Editor;
+            this.editorComponent = EditorController;
+
             this.items = [];
 
             this.searchBox = document.querySelector('#search-box');
@@ -18,6 +21,10 @@ class ExplorerController {
         return ExplorerController.instance;
     }
 
+    async clickItem(itemID) {
+        this.editorComponent.setItem(await this.editor.getItemById(itemID));
+    }
+
     insertItems(containerId) {
         const container = document.getElementById(containerId);
         const list = document.createElement('ul');
@@ -29,6 +36,9 @@ class ExplorerController {
             const listItem = document.createElement('li');
             listItem.className = 'list-group-item';
             listItem.innerHTML = item.name;
+
+            listItem.onclick = (e) => {this.clickItem(item.id)};
+
             list.appendChild(listItem);
         }
 
