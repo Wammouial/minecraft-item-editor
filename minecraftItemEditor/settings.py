@@ -32,6 +32,8 @@ DJANGO_SUPERUSER_NAME = "Kado"
 DJANGO_SUPERUSER_MAIL = "test@mail.com"
 DJANGO_SUPERUSER_PASSWORD = "proutprout"
 
+LOGIN_URL = '/login'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -64,7 +66,7 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-	"http://localhost:3000",
+	"http://127.0.0.1:8000",
 	"http://localhost:80",
 	"http://localhost:8080"
 ]

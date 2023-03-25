@@ -21,4 +21,3 @@ class EditorController {
   }
 }
 
-export default EditorController;

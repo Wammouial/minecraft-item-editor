@@ -1,5 +1,5 @@
 class ItemController {
-    static API_BASE_URL = 'http://localhost:8000';
+    static API_BASE_URL = 'http://localhost:8000/editor';
     static ITEMS_BASE_URL = ItemController.API_BASE_URL + "/items/";
 
     async getAllItems() {

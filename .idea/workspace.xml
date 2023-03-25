@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47a8e5d9-6183-4290-845c-8547750758c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/editor/data/mockdata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/management/commands/mockCommand.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/mockdata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/mockdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/mockdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/NavigatorController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/NavigatorController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/root.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/root.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minecraftItemEditor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/minecraftItemEditor/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +48,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "W:/Dev/minecraft-item-editor/venv",
     "node.js.detected.package.eslint": "true",
@@ -67,7 +74,7 @@
       <updated>1679428437675</updated>
       <workItem from="1679428440093" duration="8937000" />
       <workItem from="1679441447436" duration="3464000" />
-      <workItem from="1679692799611" duration="12677000" />
+      <workItem from="1679692799611" duration="15984000" />
     </task>
     <servers />
   </component>

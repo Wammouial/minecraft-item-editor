@@ -48,6 +48,6 @@ class Editor {
 }
 
 const EditorInstance = new Editor();
-Object.freeze(EditorInstance);
+//Object.freeze(EditorInstance);
 
 export default EditorInstance;

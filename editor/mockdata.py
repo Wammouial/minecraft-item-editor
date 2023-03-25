@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from editor.models import Item
 
 import json
@@ -21,4 +22,10 @@ def setMockData():
 
 		# Save the object to the database
 		item.save()
+
+	_u = User(
+		username="test", email="test@mail.com", password="proutprout"
+	)
+	_u.set_password("proutprout")
+	_u.save()
 

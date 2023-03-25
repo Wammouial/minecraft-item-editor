@@ -15,5 +15,3 @@ class NavigatorController {
     // logique pour afficher/masquer le menu de navigation lorsqu'il est cliqué
   }
 }
-
-export default NavigatorController;
