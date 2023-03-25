@@ -1,0 +1,92 @@
+{
+  "mockdata": [
+    {
+      "name": "CASQUE_MARCHEUR_SANG_1",
+      "image": "image1.png",
+      "options": {
+        "roll-modifier-check-order": true,
+        "tiered": true
+      },
+      "base": {
+        "material": "IRON_HELMET",
+        "name": "<gradient:#21a200:#20e800>§lCasque du Marcheur de Sang 1",
+        "max-health": 14,
+        "defense": 10,
+        "unbreakable": true,
+        "gem-sockets": []
+      }
+    },
+    {
+      "name": "CASQUE_MARCHEUR_SANG_2",
+      "image": "image2.png",
+      "options": {
+        "roll-modifier-check-order": false,
+        "tiered": true
+      },
+      "base": {
+        "material": "GOLD_HELMET",
+        "name": "<gradient:#ff7f00:#ffd700>§lCasque du Marcheur de Sang 2",
+        "max-health": 16,
+        "defense": 12,
+        "unbreakable": false,
+        "gem-sockets": [
+          "red",
+          "green"
+        ]
+      }
+    },
+    {
+      "name": "CASQUE_MARCHEUR_SANG_3",
+      "image": "image3.png",
+      "options": {
+        "roll-modifier-check-order": true,
+        "tiered": false
+      },
+      "base": {
+        "material": "DIAMOND_HELMET",
+        "name": "<gradient:#00ffff:#006699>§lCasque du Marcheur de Sang 3",
+        "max-health": 18,
+        "defense": 14,
+        "unbreakable": true,
+        "gem-sockets": [
+          "blue"
+        ]
+      }
+    },
+    {
+      "name": "CASQUE_MARCHEUR_SANG_4",
+      "image": "image4.png",
+      "options": {
+        "roll-modifier-check-order": false,
+        "tiered": false
+      },
+      "base": {
+        "material": "LEATHER_HELMET",
+        "name": "<gradient:#8b00ff:#ee82ee>§lCasque du Marcheur de Sang 4",
+        "max-health": 12,
+        "defense": 8,
+        "unbreakable": false,
+        "gem-sockets": [
+          "purple",
+          "yellow"
+        ]
+      }
+    },
+    {
+      "name": "CASQUE_MARCHEUR_SANG_5",
+      "image": "image5.png",
+      "options": {
+        "roll-modifier-check-order": true,
+        "tiered": true
+      },
+      "base": {
+        "material": "CHAINMAIL_HELMET",
+        "name": "<gradient:#00ff00:#ffff00>§lCasque du Marcheur de Sang 5",
+        "max-health": 14,
+        "defense": 10,
+        "unbreakable": true,
+        "gem-sockets": []
+      }
+    }
+  ]
+}

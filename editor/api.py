@@ -1,7 +1,9 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import generics, viewsets
-from rest_framework.decorators import action
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.decorators import action, api_view, authentication_classes, permission_classes
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 
 from .models import Item, Panoplie, Template
@@ -54,6 +56,8 @@ class TemplateViewSet(viewsets.ModelViewSet):
     serializer_class = TemplateSerializer
 
 
+@api_view(['POST'])
+@permission_classes([])
 @csrf_exempt
 def create_item_from_yaml(request):
     if request.method == 'POST':
