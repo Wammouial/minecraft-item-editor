@@ -1,15 +1,21 @@
+import Editor from "../editor.js";
+
 class ExplorerController {
-    constructor(editor) {
-        this.editor = editor;
-        this.items = [];
+    constructor() {
+        if (!ExplorerController.instance) {
+            this.editor = Editor;
+            this.items = [];
 
-        this.itemList = document.querySelector('#item-list');
-        this.searchBox = document.querySelector('#search-box');
-        this.sortBy = document.querySelector('#sort-by');
-        this.searchBox.addEventListener('input', (e) => this.handleSearch(e));
-        this.sortBy.addEventListener('change', (e) => this.handleSort(e));
+            this.searchBox = document.querySelector('#search-box');
+            this.sortBy = document.querySelector('#sort-by');
+            this.searchBox.addEventListener('input', (e) => this.handleSearch(e));
+            this.sortBy.addEventListener('change', (e) => this.handleSort(e));
 
-        this.getItemList().then(() => {console.log("Data loaded")});
+            this.getItemList().then(() => {console.log("Data loaded")});
+
+            ExplorerController.instance = this;
+        }
+        return ExplorerController.instance;
     }
 
     insertItems(containerId) {
@@ -49,3 +55,4 @@ class ExplorerController {
     }
 }
 
+export default ExplorerController;

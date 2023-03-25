@@ -1,9 +1,14 @@
 class EditorController {
   constructor() {
-    this.form = document.querySelector('#item-form');
-    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-    this.deleteButton = document.querySelector('#delete-button');
-    this.deleteButton.addEventListener('click', () => this.handleDelete());
+    if (!EditorController.instance) {
+      this.form = document.querySelector('#item-form');
+      this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+      this.deleteButton = document.querySelector('#delete-button');
+      this.deleteButton.addEventListener('click', () => this.handleDelete());
+
+      EditorController.instance = this;
+    }
+    return EditorController.instance;
   }
 
   handleSubmit(e) {
@@ -21,3 +26,4 @@ class EditorController {
   }
 }
 
+export default EditorController;

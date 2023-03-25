@@ -1,10 +1,14 @@
 class NavigatorController {
   constructor() {
-    this.navigator = document.querySelector('#navigator');
-    //this.navToggle = document.querySelector('#nav-toggle');
-    //this.navLinks = document.querySelectorAll('.nav__link');
-    //this.navMenu.addEventListener('click', (e) => this.handleNavClick(e));
-    //this.navToggle.addEventListener('click', () => this.toggleNav());
+    if (!NavigatorController.instance) {
+      this.navigator = document.querySelector('#navigator');
+      //this.navToggle = document.querySelector('#nav-toggle');
+      //this.navLinks = document.querySelectorAll('.nav__link');
+      //this.navMenu.addEventListener('click', (e) => this.handleNavClick(e));
+      //this.navToggle.addEventListener('click', () => this.toggleNav());
+      NavigatorController.instance = this;
+    }
+    return NavigatorController.instance;
   }
 
   handleNavClick(e) {
@@ -15,3 +19,5 @@ class NavigatorController {
     // logique pour afficher/masquer le menu de navigation lorsqu'il est cliqué
   }
 }
+
+export default NavigatorController;
