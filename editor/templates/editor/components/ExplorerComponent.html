@@ -1,6 +1,6 @@
-<div class="explorer">
+<div class="explorer" id="explorer">
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Recherche" aria-label="Recherche" aria-describedby="basic-addon2">
+    <input type="text" id="search-box" class="form-control" placeholder="Recherche" aria-label="Recherche" aria-describedby="basic-addon2">
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="button">Recherche</button>
     </div>
@@ -10,13 +10,13 @@
       aria-haspopup="true" aria-expanded="false">
       Trier par
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="sort-by">
       <a class="dropdown-item" href="#">Nom</a>
       <a class="dropdown-item" href="#">Date de création</a>
       <a class="dropdown-item" href="#">Date de mise à jour</a>
     </div>
   </div>
-  <ul class="list-group">
+  <ul class="list-group" id="item-list">
     <li class="list-group-item">Item 1</li>
     <li class="list-group-item">Item 2</li>
     <li class="list-group-item">Item 3</li>

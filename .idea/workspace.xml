@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47a8e5d9-6183-4290-845c-8547750758c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/EditorComponent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/NavigatorComponent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/css/root.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/ItemController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/templates/editor/components/EditorComponent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/templates/editor/components/NavigatorComponent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor/templates/editor/root.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/components/NavigatorController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/editor/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minecraftItemEditor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/minecraftItemEditor/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/css/EditorComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/EditorComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/css/NavigatorComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/NavigatorComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/root.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/EditorComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/EditorComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/NavigatorComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/NavigatorComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/root.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/root.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,7 +73,7 @@
       <updated>1679428437675</updated>
       <workItem from="1679428440093" duration="8937000" />
       <workItem from="1679441447436" duration="3464000" />
-      <workItem from="1679692799611" duration="6956000" />
+      <workItem from="1679692799611" duration="9742000" />
     </task>
     <servers />
   </component>

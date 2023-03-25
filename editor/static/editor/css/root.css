@@ -8,16 +8,3 @@ body {
   display: flex;
   height: 100%;
 }
-
-#navigator {
-  width: 20%;
-  min-width: 200px;
-}
-
-#explorer {
-  width: 40%;
-}
-
-#editor {
-  width: 40%;
-}

@@ -1,6 +1,7 @@
 /* ExplorerComponent */
 .explorer {
   display: flex;
+  width: 45%;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
