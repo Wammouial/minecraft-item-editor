@@ -1,4 +1,5 @@
 import Editor from "../editor.js";
+import {createInputsObject} from "./InputCreator.js";
 
 const InputTypes = {
   'string': 'text',
@@ -30,6 +31,9 @@ class EditorController {
         const form = document.createElement('form');
         form.id = "item-form";
 
+        const container = createInputsObject("", this.currentItem, "data", this.pushItem);
+
+        /*
         for (const key in this.currentItem) {
             const value = this.currentItem[key];
 
@@ -73,7 +77,9 @@ class EditorController {
             }
 
             form.appendChild(divGroup);
-        }
+        }*/
+        form.appendChild(container);
+
         document.getElementById("input-manager").replaceChild(form, document.getElementById("item-form"));
     }
 
@@ -83,10 +89,48 @@ class EditorController {
     }
 
     pushItem(e) {
-        this.currentItem[e.target.name] = e.target.value;
+        //console.dir(e)
+        let subObject = [];
+        let target = e.target;
+
+        let value = EditorController.instance.currentItem;
+
+        let newObj = null;
+
+        while (newObj === null || newObj !== "") {
+            if (target.parentElement.parentElement.hasAttribute("obj")) {
+                newObj = target.parentElement.parentElement.getAttribute("obj");
+                if (newObj !== "") {
+                    subObject.push(newObj);
+                } else {
+                    break;
+                }
+            } else {
+                break;
+            }
+            target = target.parentElement.parentElement;
+        }
+        console.log(subObject)
+         subObject.reverse().forEach((k) => {
+            console.log(k)
+            value = value[k];
+        });
+
+        console.log(e);
+
+        if (e.target.type === "checkbox") {
+            value[e.target.name] = e.target.checked;
+        } else if (e.target.type === "range") {
+            value[e.target.name] = parseFloat(e.target.value);
+        } else {
+            value[e.target.name] = e.target.value;
+        }
+
+        console.log(value[e.target.name], EditorController.instance.currentItem);
+
 
         // if id
-        Editor.updateItem(this.currentItem.id, this.currentItem).then(() => console.log("Updated"));
+        Editor.updateItem(EditorController.instance.currentItem.id, EditorController.instance.currentItem).then(() => console.log("Updated"));
     }
 
     handleSubmit(e) {
