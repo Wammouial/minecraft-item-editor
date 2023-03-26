@@ -27,22 +27,28 @@ class ExplorerController {
 
     insertItems(containerId) {
         const container = document.getElementById(containerId);
-        const list = document.createElement('ul');
-        list.className = 'list-group';
-        list.id = 'item-list';
+        container.className = 'flex-wrap justify-content-center';
+        container.id = 'item-container';
 
         for (let i = 0; i < this.items.length; i++) {
             const item = this.items[i];
-            const listItem = document.createElement('li');
-            listItem.className = 'list-group-item';
-            listItem.innerHTML = item.name;
+            const listItem = document.createElement('div');
+            listItem.className = 'card m-3';
+
+            const bodyItem = document.createElement("div");
+            bodyItem.className = "card-body";
+
+            const h5Item = document.createElement("h5");
+            h5Item.innerHTML = item.name;
+
+            bodyItem.appendChild(h5Item);
+            listItem.appendChild(bodyItem);
 
             listItem.onclick = (e) => {this.clickItem(item.id)};
 
-            list.appendChild(listItem);
+            container.appendChild(listItem);
         }
 
-        container.appendChild(list);
     }
 
     async getItemList() {

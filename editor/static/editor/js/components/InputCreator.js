@@ -52,6 +52,9 @@ function createInput(key, value, keystree, pushitem) {
 }
 
 function createLabelForInput(key, inputID) {
+    if (key === "id") {
+        return document.createElement("div");
+    }
     const label = document.createElement('label');
     label.textContent = key;
     label.setAttribute('for', inputID);
@@ -83,6 +86,14 @@ function createInputCheckbox(key, value, pushItem) {
 }
 
 function createInputRange(key, value, pushItem) {
+    if (key === "id") {
+        const _nu = document.createElement("div");
+
+        _nu.appendChild(document.createElement("div"));
+        _nu.appendChild(document.createElement("div"));
+
+        return _nu;
+    }
     const container = document.createElement("div");
 
     let range = document.createElement("input");

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47a8e5d9-6183-4290-845c-8547750758c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/editor/static/editor/js/components/InputCreator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/InputCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/InputCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/ExplorerComponent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
       <workItem from="1679428440093" duration="8937000" />
       <workItem from="1679441447436" duration="3464000" />
       <workItem from="1679692799611" duration="21915000" />
-      <workItem from="1679777489556" duration="13456000" />
+      <workItem from="1679777489556" duration="16760000" />
     </task>
     <servers />
   </component>
