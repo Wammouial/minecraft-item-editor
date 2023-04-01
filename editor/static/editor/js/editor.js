@@ -41,6 +41,14 @@ class Editor {
         return updatedItem;
     }
 
+    async cloneItem(item) {
+        const i = {...item};
+        delete i.id;
+        const newItem = await this.itemController.createItem(i);
+        this.items.push(newItem);
+        return newItem;
+    }
+
     async deleteItem(id) {
         await this.itemController.deleteItem(id);
         this.items = this.items.filter(item => item.id !== id);

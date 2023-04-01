@@ -44,6 +44,30 @@ class ExplorerController {
             bodyItem.appendChild(h5Item);
             listItem.appendChild(bodyItem);
 
+            // Ajout d'un conteneur pour les boutons
+            const cardFooterContainer = document.createElement('div');
+            cardFooterContainer.className = 'card-footer';
+
+            // Ajout d'un conteneur pour les boutons
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'button-container';
+
+            // Ajout du bouton de suppression
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = 'Delete';
+            deleteButton.onclick = (e) => {this.editor.deleteItem(item.id) && window.location.reload()};
+            buttonContainer.appendChild(deleteButton);
+
+            // Ajout du bouton de modification
+            const editButton = document.createElement('button');
+            editButton.innerHTML = 'Clone';
+            editButton.onclick = (e) => {this.editor.cloneItem(item) && window.location.reload()};
+            buttonContainer.appendChild(editButton);
+
+            // Ajout du conteneur de boutons à l'élément de liste
+            cardFooterContainer.appendChild(buttonContainer);
+            listItem.appendChild(cardFooterContainer);
+
             listItem.onclick = (e) => {this.clickItem(item.id)};
 
             container.appendChild(listItem);

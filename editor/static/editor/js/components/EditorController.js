@@ -1,5 +1,6 @@
 import Editor from "../editor.js";
 import {createInputsObject} from "./InputCreator.js";
+import editor from "../editor.js";
 
 const InputTypes = {
   'string': 'text',
@@ -19,11 +20,13 @@ class EditorController {
 
             this.form = document.querySelector('#item-form');
             this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
             this.deleteButton = document.querySelector('#delete-button');
             this.deleteButton.addEventListener('click', () => this.handleDelete());
 
             EditorController.instance = this;
         }
+        document.querySelector('#editor-deleteButton').addEventListener('click', () => confirm("Delete l'item ?") && this.deleteItem() && window.location.reload());
         return EditorController.instance;
     }
 
@@ -131,6 +134,10 @@ class EditorController {
 
         // if id
         Editor.updateItem(EditorController.instance.currentItem.id, EditorController.instance.currentItem).then(() => console.log("Updated"));
+    }
+
+    async deleteItem() {
+        return await editor.deleteItem(EditorController.instance.currentItem.id);
     }
 
     handleSubmit(e) {
