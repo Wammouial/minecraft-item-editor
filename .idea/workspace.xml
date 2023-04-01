@@ -7,10 +7,8 @@
     <list default="true" id="47a8e5d9-6183-4290-845c-8547750758c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/ExplorerComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/EditorController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/components/ExplorerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/static/editor/js/editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/js/editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/EditorComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/EditorComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/static/editor/css/NavigatorComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/editor/static/editor/css/NavigatorComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor/templates/editor/components/NavigatorComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/editor/templates/editor/components/NavigatorComponent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
       <workItem from="1679441447436" duration="3464000" />
       <workItem from="1679692799611" duration="21915000" />
       <workItem from="1679777489556" duration="18407000" />
-      <workItem from="1680304303364" duration="3379000" />
+      <workItem from="1680304303364" duration="5300000" />
     </task>
     <servers />
   </component>
