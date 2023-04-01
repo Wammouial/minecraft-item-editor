@@ -9,16 +9,24 @@ class ExplorerController {
 
             this.items = [];
 
+            this.locks = [];
+
             this.searchBox = document.querySelector('#search-box');
             this.sortBy = document.querySelector('#sort-by');
             this.searchBox.addEventListener('input', (e) => this.handleSearch(e));
             this.sortBy.addEventListener('change', (e) => this.handleSort(e));
 
-            this.getItemList().then(() => {console.log("Data loaded")});
+            this.getLocks().then(() => {
+                this.getItemList().then(() => {console.log("Data loaded")});
+            });
 
             ExplorerController.instance = this;
         }
         return ExplorerController.instance;
+    }
+
+    async getLocks() {
+        this.locks =  editor.getLocks();
     }
 
     async clickItem(itemID) {
@@ -44,31 +52,36 @@ class ExplorerController {
             bodyItem.appendChild(h5Item);
             listItem.appendChild(bodyItem);
 
-            // Ajout d'un conteneur pour les boutons
-            const cardFooterContainer = document.createElement('div');
-            cardFooterContainer.className = 'card-footer';
+            if (this.locks.includes(item.id)) {
+                listItem.className = "card m-3 islocked";
 
-            // Ajout d'un conteneur pour les boutons
-            const buttonContainer = document.createElement('div');
-            buttonContainer.className = 'button-container';
+            } else {
+                // Ajout d'un conteneur pour les boutons
+                const cardFooterContainer = document.createElement('div');
+                cardFooterContainer.className = 'card-footer';
 
-            // Ajout du bouton de suppression
-            const deleteButton = document.createElement('button');
-            deleteButton.innerHTML = 'Delete';
-            deleteButton.onclick = (e) => {this.editor.deleteItem(item.id) && window.location.reload()};
-            buttonContainer.appendChild(deleteButton);
+                // Ajout d'un conteneur pour les boutons
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'button-container';
 
-            // Ajout du bouton de modification
-            const editButton = document.createElement('button');
-            editButton.innerHTML = 'Clone';
-            editButton.onclick = (e) => {this.editor.cloneItem(item) && window.location.reload()};
-            buttonContainer.appendChild(editButton);
+                // Ajout du bouton de suppression
+                const deleteButton = document.createElement('button');
+                deleteButton.innerHTML = 'Delete';
+                deleteButton.onclick = (e) => {this.editor.deleteItem(item.id) && window.location.reload()};
+                buttonContainer.appendChild(deleteButton);
 
-            // Ajout du conteneur de boutons à l'élément de liste
-            cardFooterContainer.appendChild(buttonContainer);
-            listItem.appendChild(cardFooterContainer);
+                // Ajout du bouton de modification
+                const editButton = document.createElement('button');
+                editButton.innerHTML = 'Clone';
+                editButton.onclick = (e) => {this.editor.cloneItem(item) && window.location.reload()};
+                buttonContainer.appendChild(editButton);
 
-            listItem.onclick = (e) => {this.clickItem(item.id)};
+                // Ajout du conteneur de boutons à l'élément de liste
+                cardFooterContainer.appendChild(buttonContainer);
+                listItem.appendChild(cardFooterContainer);
+
+                listItem.onclick = (e) => {this.clickItem(item.id)};
+            }
 
             container.appendChild(listItem);
         }

@@ -5,6 +5,7 @@ class Editor {
     constructor() {
         if (!Editor.instance) {
             this.items = [];
+            this.locks = [];
             this.itemController = new ItemController();
 
             Editor.instance = this;
@@ -16,6 +17,11 @@ class Editor {
     async getAllItems() {
         this.items = await this.itemController.getAllItems();
         return this.items;
+    }
+
+    async getLocks() {
+        this.locks = await this.itemController.getLocks();
+        return this.locks;
     }
 
     async getItemById(id) {

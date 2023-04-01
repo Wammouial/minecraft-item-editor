@@ -7,6 +7,11 @@ class ItemController {
         return await response.json();
     }
 
+    async getLocks() {
+        const response = await fetch(`${ItemController.ITEMS_BASE_URL}locks/`)
+        return await response.json()
+    }
+
     async getItemById(id) {
         const response = await fetch(`${ItemController.ITEMS_BASE_URL}${id}/`);
         return await response.json();
